@@ -11,9 +11,10 @@ phases:
     commands:
       - echo Build started on `date`
       - ./gradlew installDist
+      - zip -r build/sandbox-ktor.zip build/install/sandbox-ktor
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - build/install/sandbox-ktor
+    - build/sandbox-ktor.zip
