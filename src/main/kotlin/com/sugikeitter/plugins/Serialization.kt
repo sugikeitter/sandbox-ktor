@@ -16,7 +16,7 @@ fun Application.configureSerialization() {
             call.respond(mapOf("hello" to "world"))
         }
         get("/json/{name}") {
-            call.respond(mapOf("hello" to call.parameters["login"]))
+            call.respond(mapOf("hello" to call.parameters["name"]))
         }
     }
 }
